@@ -11,13 +11,13 @@ const PORT = process.env.PORT || 5000;
 app.use(cors());
 app.use(express.json());
 
-mongoose
-  .connect(process.env.MONGO_URI)
-  .then(() => console.log('🟢 MongoDB connected successfully.'))
-  .catch((err) => {
-    console.error('🔴 DB Connection error:', err.message);
-    process.exit(1);
-  });
+//mongoose
+//  .connect(process.env.MONGO_URI)
+//  .then(() => console.log('🟢 MongoDB connected successfully.'))
+//.catch((err) => {
+// console.error('🔴 DB Connection error:', err.message);
+//  process.exit(1);
+//  });
 
 app.get('/', (req, res) => {
   res.send('Portfolio API Service is running...');
